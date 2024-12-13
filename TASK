@@ -1,0 +1,23 @@
+Dashboard
+- KM traveled vs Vehicle
+- Bar graph
+
+- Logout
+
+Terms & Conditions
+- From about to T&C
+
+Login - 
+
+Emergency - Notification alert - Socket / Pusher
+
+Rents - Socket / Pusher
+
+
+curl -H "Content-Type: application/json" ^
+     -H "Authorization: Bearer CB820096D2CE8541F2712E624FA037B3BC425952854E10E0F0FD4F983923591B" ^
+     -X POST "https://9a5af1e7-7c18-4bf4-9eff-e240de9055a2.pushnotifications.pusher.com/publish_api/v1/instances/9a5af1e7-7c18-4bf4-9eff-e240de9055a2/publishes" ^
+     -d "{\"interests\":[\"hello\"],\"web\":{\"notification\":{\"title\":\"Hello\",\"body\":\"Hello, world!\",\"deep_link\":\"https://google.com\"}}}"
+
+
+
