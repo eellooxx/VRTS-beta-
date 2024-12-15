@@ -102,6 +102,10 @@ class VehicleController extends Controller
         }
         $vehicle->delete();
         return redirect()->route('vehicles.index')->with('success', 'Vehicle deleted successfully.');
-    
     }
+
+    public function getAllVehicles()
+{
+    return Vehicle::all();
+}
 }

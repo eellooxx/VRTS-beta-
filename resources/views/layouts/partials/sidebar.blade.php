@@ -2,10 +2,10 @@
     <div class="sb-sidenav-menu">
         <div class="nav">
             <div class="sb-sidenav-menu-heading">Home</div>
-            {{-- <a class="nav-link" href="{{ route('home') }}">
+            <a class="nav-link" href="{{ route('home') }}">
                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                 Dashboard
-            </a> --}}
+            </a>
             {{-- Track --}}
             <a class="nav-link" href="{{ route('track.index') }}">
                 <div class="sb-nav-link-icon"><i class="fas fa-map-marker-alt"></i></div>
@@ -55,9 +55,14 @@
                 <div class="sb-nav-link-icon"><i class="fa-solid fa-triangle-exclamation"></i></div>
                 Emergency
             </a>
+            <a style="float:left;text-decoration: none;" class="nav-link" href="javascript:history.back()">
+               <div class="sb-nav-link-icon"><i class="fa fa-angle-left"></i></div>
+               
+               &nbsp;{{ __('Back ') }}
+              </a>
         </div>
     </div>
-    <div class="sb-sidenav-footer">
+    {{-- <div class="sb-sidenav-footer">
         <div class="small">Logged in as: {{ Auth::user()->name }}</div>
-    </div>
+    </div> --}}
 </nav>

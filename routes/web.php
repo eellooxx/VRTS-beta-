@@ -44,6 +44,9 @@ Route::prefix('rents')->middleware('auth')->group(function () {
 });
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::resource('drivers', DriverController::class);
+Route::resource('rents', RentController::class);
+Route::resource('vehicles', VehicleController::class);
 // web.php
 
 Route::prefix('track')->middleware('auth')->group(function () {

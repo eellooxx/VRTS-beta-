@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Rent;
+use App\Models\Driver;
+use App\Models\Vehicle;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -23,6 +26,11 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+
+        $totalRents = Rent::count();
+        $totalDrivers = Driver::count();
+        $totalVehicles = Vehicle::count();
+
+        return view('home', compact('totalRents', 'totalDrivers', 'totalVehicles'));
     }
 }

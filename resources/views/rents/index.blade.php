@@ -4,7 +4,7 @@
 <h1 style="font-size: 1.5em; margin: 10px 0;">Rent Management</h1>
 <div class="card mb-4">
     <div class="card-header">
-        <i class="fas fa-table me-1"></i>
+        <i class="fas fa-check"></i>
         Rent 
     </div>
     <div class="card-body">

@@ -227,7 +227,7 @@ class RentController extends Controller
                     "notification" => [
                         "title" => "emergency",
                         "body" => "Emergency alert!",
-                        "deep_link" => "http://192.168.43.36:8000/track/" .  $id
+                        "deep_link" => "http://192.168.1.3:8000/track/" .  $id
                     ]
                 ]
             ]),
