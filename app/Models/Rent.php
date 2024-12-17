@@ -19,7 +19,8 @@ class Rent extends Model
         'status',
         'distance_traveled',
         'coordinates',
-        'emergency'
+        'emergency',
+        'user_id'
     ];
     protected $casts = [
         'scheduled_at' => 'datetime',
@@ -41,5 +42,9 @@ class Rent extends Model
     public function isCompleted()
     {
         return $this->status === 'completed';
+    }
+    public function user()
+    {
+        return $this->belongsTo(User::class);
     }
 }

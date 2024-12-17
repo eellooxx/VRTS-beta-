@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('rents', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('user_id')->constrained()->onDelete('cascade');
             $table->foreignId('driver_id')->constrained()->onDelete('cascade');
             $table->foreignId('vehicle_id')->constrained()->onDelete('cascade');
             $table->string('route');
@@ -22,7 +23,7 @@ return new class extends Migration
             $table->timestamps();
             $table->float('distance_traveled');
             $table->longText('coordinates');
-            $table->int('emergency');
+            $table->integer('emergency');
         });
     }
 

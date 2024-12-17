@@ -25,6 +25,7 @@ class Driver extends Authenticatable
         'birthday',
         'password',
         'is_active',
+        'user_id'
     ];
 
     protected $casts = [
@@ -40,5 +41,9 @@ class Driver extends Authenticatable
     public function rents()
     {
         return $this->hasMany(Rent::class);
+    }
+    public function user()
+    {
+        return $this->belongsTo(User::class);
     }
 }

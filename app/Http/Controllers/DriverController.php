@@ -45,6 +45,7 @@ class DriverController extends Controller
             'password' => 'required|string|min:8|confirmed',
         ]);
         //$data['password'] = bcrypt($data['password']);
+        $data['user_id'] = auth()->id();
         $data['password'] = $request->password;
 
         Driver::create($data);

@@ -18,5 +18,11 @@ class Vehicle extends Model
         'description',
         'status',
         'image',
+        'user_id'
     ];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

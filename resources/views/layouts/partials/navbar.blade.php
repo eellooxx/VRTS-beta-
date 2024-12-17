@@ -1,5 +1,5 @@
 <nav class="sb-topnav navbar navbar-expand navbar-light" style="background-color: white; border-bottom: 0.2px solid rgb(204, 190, 190); box-shadow: 0 2px 4px rgba(110, 103, 103, 0.37);">
-    <a class="navbar-brand ps-3" href="{{ route('track.index') }}" style="font-size: 16px">
+    <a class="navbar-brand ps-3" href="{{ route('track.index') }}" style="font-size: 15px">
         <img src="{{ asset('CapLogo.png') }}" alt="Car Rental Tracking Logo" width="40" height="40">
         Vehicle Rental Tracker</a>
     <!-- Sidebar Toggle-->

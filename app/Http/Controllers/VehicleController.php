@@ -45,6 +45,8 @@ class VehicleController extends Controller
             $data['image'] = $request->file('image')->store('vehicles', 'public');
         }
 
+        $data['user_id'] = auth()->id();
+
         Vehicle::create($data);
         return redirect()->route('vehicles.index')->with('success', 'Vehicle added successfully.');
     }

@@ -61,6 +61,8 @@ class RentController extends Controller
         $data['distance_traveled'] = 0;
         $data['emergency'] = 0;
         $data['coordinates'] = "";
+        
+        $data['user_id'] = auth()->id();
 
         Rent::create($data);
     
@@ -227,7 +229,7 @@ class RentController extends Controller
                     "notification" => [
                         "title" => "emergency",
                         "body" => "Emergency alert!",
-                        "deep_link" => "http://192.168.1.3:8000/track/" .  $id
+                        "deep_link" => "http://grey-marten-935587.hostingersite.com/track/" .  $id
                     ]
                 ]
             ]),

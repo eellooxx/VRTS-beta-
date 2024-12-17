@@ -12,6 +12,7 @@
  */
 
  /* Additionals */
+ @import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
 
  .bttn {
   color: #ffffff;
@@ -161,7 +162,7 @@
 
 body {
   margin: 0;
-  font-family: var(--bs-body-font-family);
+  font-family: 'Montserrat', sans-serif;
   font-size: var(--bs-body-font-size);
   font-weight: var(--bs-body-font-weight);
   line-height: var(--bs-body-line-height);
