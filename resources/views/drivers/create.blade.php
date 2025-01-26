@@ -17,17 +17,17 @@
         <label for="email">Email:</label>
         <input type="email" name="email" id="email" placeholder="Email" required>
 
-        <label for="contact">Contact:</label>
+        <label for="contact">Contact Number:</label>
         <input type="text" name="contact" id="contact" placeholder="Contact" required>
 
         <label for="address">Address:</label>
         <input type="text" name="address" id="address" placeholder="Address" required>
 
-        <label for="age">Age:</label>
-        <input type="number" name="age" id="age" placeholder="Age" required>
-
         <label for="birthday">Birthday:</label>
         <input type="date" name="birthday" id="birthday" required>
+
+        <label for="age">Age:</label>
+        <input type="number" name="age" id="age" placeholder="Age" readonly>
 
         <label for="password">Password:</label>
         <input type="password" name="password" id="password" placeholder="Password" required>
@@ -91,4 +91,43 @@
     }
 
     </style>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const birthdayInput = document.getElementById('birthday');
+            const ageInput = document.getElementById('age');
+    
+            
+            function calculateAge(birthday) {
+                const birthDate = new Date(birthday);
+                const today = new Date();
+                let age = today.getFullYear() - birthDate.getFullYear();
+                const monthDifference = today.getMonth() - birthDate.getMonth();
+                if (monthDifference < 0 || (monthDifference === 0 && today.getDate() < birthDate.getDate())) {
+                    age--;
+                }
+                return age;
+            }
+    
+            
+            birthdayInput.addEventListener('input', function () {
+                const birthday = birthdayInput.value;
+                if (birthday) {
+                    const age = calculateAge(birthday);
+                    ageInput.value = age >= 18 ? age : '';
+                }
+            });
+    
+            
+            ageInput.addEventListener('input', function () {
+                const age = parseInt(ageInput.value, 10);
+                if (!isNaN(age) && age >= 18) {
+                    const today = new Date();
+                    const birthYear = today.getFullYear() - age;
+                    const birthDate = new Date(birthYear, today.getMonth(), today.getDate());
+                    birthdayInput.value = birthDate.toISOString().split('T')[0];
+                }
+            });
+        });
+    </script>
 @endsection

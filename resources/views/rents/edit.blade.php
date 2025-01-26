@@ -61,17 +61,14 @@
         background-color: #fff;
         border: 1px solid #ddd;
         border-radius: 8px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        color: var(--text-color);
-        font-family: Arial, sans-serif;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);        
     }
     
     /* Form label styling */
     .rents-edit-container label {
-        font-weight: bold;
         display: block;
         margin-bottom: 5px;
-        font-size: 14px;
+        font-weight: bold;
         color: var(--text-color);
     }
     
@@ -83,7 +80,7 @@
     .rents-edit-container textarea {
         width: 100%;
         padding: 10px;
-        margin-bottom: 15px;
+        margin-bottom: 5px;
         border: 1px solid #ccc;
         border-radius: 4px;
         font-size: 14px;
@@ -96,16 +93,11 @@
     }
     
     /* Submit button styling */
-    .rents-edit-container .btn {
-        background-color: var(--primary-color);
-        color: white;
-        border: none;
+    button{
+        /* width: 90%; */
         padding: 10px;
-        border-radius: 5px;
-        cursor: pointer;
-        font-weight: bold;
-        width: 100%;
-        font-size: 15px;
+        font-size: 16px;
+        display: block;
     }
     
     .rents-edit-container .btn:hover {

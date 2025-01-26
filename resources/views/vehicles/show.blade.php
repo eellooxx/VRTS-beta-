@@ -26,7 +26,7 @@
         <!-- Action Links -->
         <div class="actions">
             <a href="{{ route('vehicles.edit', $vehicle) }}" class="bttn btn-blue">Edit</a>
-            <a href="{{ route('vehicles.index') }}" class="bttn">Back</a>
+            {{-- <a href="{{ route('vehicles.index') }}" class="bttn">Back</a> --}}
 
             <!-- Delete Button -->
             <form action="{{ route('vehicles.destroy', $vehicle) }}" method="POST" style="display:inline;">

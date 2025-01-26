@@ -19,7 +19,7 @@
         <label for="vehicle_id">Select Vehicle:</label>
         <select name="vehicle_id" id="vehicle_id" required>
             @foreach($vehicles as $vehicle)
-                <option value="{{ $vehicle->id }}">{{ $vehicle->brand }} {{ $vehicle->model }}</option>
+                <option value="{{ $vehicle->id }}">{{ $vehicle->brand }} {{ $vehicle->model }} {{ $vehicle->plate_number }}</option>
             @endforeach
         </select>
 

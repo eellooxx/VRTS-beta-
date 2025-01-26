@@ -45,7 +45,7 @@
             <input type="file" id="image" name="image">
 
             <!-- Submit Button -->
-            <button type="submit" class="btn">Update Vehicle</button>
+            <button type="submit" class="bttn btn-green">Update Vehicle</button>
         </form>
     </div>
 
@@ -59,8 +59,6 @@
             border: 1px solid #ddd;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            color: var(--text-color);
-            font-family: Arial, sans-serif;
         }
 
         /* Form label styling */
@@ -69,7 +67,6 @@
             display: block;
             margin-bottom: 5px;
             font-size: 14px;
-            color: var(--text-color);
         }
 
         /* Input and select field styling */
@@ -84,7 +81,6 @@
             border: 1px solid #ccc;
             border-radius: 4px;
             font-size: 14px;
-            color: var(--text-color);
         }
 
         /* Textarea specific styling */
@@ -124,9 +120,25 @@
                 font-size: 13px;
             }
 
-            .vehicle-edit-container .btn {
-                padding: 8px;
+            button {
+            width: 90%;
+            padding: 10px;
+            font-size: 16px;
             }
         }
     </style>
+    <script>
+        const plateNumberInput = document.getElementById('plate_number');
+    
+        plateNumberInput.addEventListener('input', function() {
+            const plateNumber = this.value.toUpperCase();
+            const regex = /^[A-Z]{3}[0-9]{4}$/;
+    
+            if (!regex.test(plateNumber)) {
+                this.setCustomValidity('Invalid license plate format. Please enter 3 letters followed by 4 numbers.');
+            } else {
+                this.setCustomValidity('');
+            }
+        });
+    </script>
 @endsection

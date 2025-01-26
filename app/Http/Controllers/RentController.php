@@ -229,7 +229,7 @@ class RentController extends Controller
                     "notification" => [
                         "title" => "emergency",
                         "body" => "Emergency alert!",
-                        "deep_link" => "http://grey-marten-935587.hostingersite.com/track/" .  $id
+                        "deep_link" => "http://192.168.100.11:8000/track/" .  $id
                     ]
                 ]
             ]),

@@ -17,7 +17,7 @@
         }
     </style>
 
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAUFkTC0pCy12a0crcsvGI2eZMLKXHHhpY"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAoQgv78wXVh3UsGGIMImwoFNBmSkhmK3Y"></script>
     <script>
         let map, marker;
 

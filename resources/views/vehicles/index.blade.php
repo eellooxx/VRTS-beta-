@@ -14,6 +14,7 @@
                 <tr>
                     <th>Brand</th>
                     <th>Model</th>
+                    <th>Color</th>
                     <th>Status</th>
                     <th>Actions</th>
                 </tr>
@@ -23,6 +24,7 @@
                 <tr>
             <td>{{ $vehicle->brand }}</td>
             <td>{{ $vehicle->model }}</td>
+            <td>{{ $vehicle->color }}</td>
             <td>{{ ucfirst($vehicle->status) }}</td>
             <td>
                 <a href="{{ route('vehicles.show', $vehicle) }}" class="bttn btn-green">View</a> |

@@ -24,7 +24,7 @@
 
         <label for="plate_number" class="col-md-4 col-form-label text-md-right">Plate Number:</label>
 
-            <input id="plate_number" type="text" class="form-control @error('plate_number') is-invalid @enderror" name="plate_number" value="{{ old('plate_number') }}" required autocomplete="plate_number">
+            <input id="plate_number" type="text" class="form-control @error('plate_number') is-invalid @enderror" name="plate_number" value="{{ old('plate_number') }}" required placeholder="ABC1234" autocomplete="plate_number">
             @error('plate_number')
                 <span class="invalid-feedback" role="alert">
                     <strong>{{ $message }}</strong>
@@ -139,4 +139,18 @@
         font-size: 16px;
     }
 </style>
+<script>
+    const plateNumberInput = document.getElementById('plate_number');
+
+    plateNumberInput.addEventListener('input', function() {
+        const plateNumber = this.value.toUpperCase();
+        const regex = /^[A-Z]{3}[0-9]{4}$/;
+
+        if (!regex.test(plateNumber)) {
+            this.setCustomValidity('Invalid license plate format. Please enter 3 letters followed by 4 numbers.');
+        } else {
+            this.setCustomValidity('');
+        }
+    });
+</script>
 @endsection
